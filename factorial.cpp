@@ -13,8 +13,7 @@ int main()
     fact *= i;
     i++;
   }
-  cout << endl
-       << "Factorial of " << n << " is " << fact;
+  cout << "Factorial of " << n << " is " << fact;
 
   return 0;
 }
