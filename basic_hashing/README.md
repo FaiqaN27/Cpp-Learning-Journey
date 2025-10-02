@@ -4,6 +4,8 @@
 
 Hashing is a technique used to **map data (keys)** to a fixed-size table (hash table) using a **hash function**.
 
+Basically hashing is storing(pre-compute) and fetching.
+
 - Purpose: Efficient searching, insertion, and deletion.
 - Goal: Achieve average **O(1)** time complexity for lookups.
 
@@ -56,10 +58,11 @@ freq[c]++; // directly increments index 66
 
 ---
 
-## 🔹 Overcoming Number Hashing Problem
+## 🔹 Overcoming Number Hashing Problem When Using Array
 
-Instead of arrays, we use **`map`** or **`unordered_map`** to store frequencies.
+Maximum size of array 10^6 can be used in main function and 10^7 if used globally. To overcome these problems, we use map/unordered_map:
 
+- Stores in key-value pair.
 - Works for very large ranges.
 - Handles negative numbers too.
 - Memory efficient.
@@ -72,6 +75,12 @@ Instead of arrays, we use **`map`** or **`unordered_map`** to store frequencies.
 
 - Implemented as a **Red-Black Tree (BST)**.
 - Keys must be **comparable (`<`)**.
+- Built-in supported:
+
+  - Integers (int, long, etc.), floating types, char, bool
+  - std::string, pointers
+  - std::pair, std::tuple (lexicographical < defined)
+
 - **Time Complexity**:
 
   - Insert: `O(log N)`
@@ -84,13 +93,20 @@ Instead of arrays, we use **`map`** or **`unordered_map`** to store frequencies.
 
 - Implemented as a **Hash Table**.
 - Keys must be **hashable**.
+- Built-in supported:
+
+  - Integers, floating types, char, bool
+  - std::string, pointers
+
+- Not supported directly: pair, tuple, structs → need custom hash function.
+
 - **Time Complexity (Average)**:
 
   - Insert: `O(1)`
   - Search: `O(1)`
   - Delete: `O(1)`
 
-- Worst case: `O(N)` (if too many collisions).
+- Worst case: `O(N)` (if too many collisions occur).
 - Keys are stored in **no particular order**.
 
 ---

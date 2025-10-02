@@ -1,3 +1,5 @@
+// using unordered map - not store in sorted manner
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -6,10 +8,10 @@ int main()
   string s;
   cout << "enter any string: ";
   cin >> s;
-  unordered_map<char, int> mp;
+  unordered_map<char, int> um;
   for (auto i : s)
   {
-    mp[i]++;
+    um[i]++;
   }
 
   int q;
@@ -21,7 +23,7 @@ int main()
     cout << "enter character to find frequency: ";
     cin >> ch;
 
-    cout << ch << " frequency is " << mp[ch] << endl;
+    cout << ch << " frequency is " << um[ch] << endl;
   }
   return 0;
 }

@@ -1,3 +1,5 @@
+// hashing character frequency using array
+
 #include <bits/stdc++.h>
 using namespace std;
 

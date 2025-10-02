@@ -1,3 +1,5 @@
+// using map to hash frequency of numbers - stores in sorted order
+
 #include <bits/stdc++.h>
 using namespace std;
 
